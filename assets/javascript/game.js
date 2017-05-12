@@ -29,15 +29,16 @@
 
           // This logic determines the outcome of the game (win/loss), and increments the appropriate counter and guesses left.
           if (userGuess === computerGuess) {
-            wins++, lettersGuessed.push(userGuess);
+              wins++, lettersGuessed.push(userGuess);
           }
+
           else {
               losses++, guessesLeft--,lettersGuessed.push(userGuess);
-
           }
 
           if (wins > 10) {
             alert ("Congrats! You're psychic!");
+            reset();
           }
 
           if (guessesLeft === 0) {
